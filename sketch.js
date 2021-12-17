@@ -24,11 +24,15 @@ boy.addAnimation("JakeRunning",boyImg);
   
 // crie Boundary (Limite) esquerdo
 leftBoundary=createSprite(0,0,100,800);
-leftBoundary.visible = false;
+//>>descomente o codigo que deixa a parede invisivel<<
+//leftBoundary.visible = true;
+//leftBoundary.visible = false;
 
 //crie Boundary direito
 rightBoundary=createSprite(410,0,100,800);
-rightBoundary.visible = false;
+ //>>descomente o codigo que deixa a parede invisivel<<
+//rightBoundary.visible = false;
+//rightBoundary.visible = true;
 }
 
 function draw() {
@@ -43,10 +47,22 @@ function draw() {
   boy.collide(leftBoundary);
   boy.collide(rightBoundary);
   
-  //código para reiniciar o fundo
-  if(path.y > 400 ){
+  // descomente o código para reiniciar o fundo
+  /*if(path.y > 400 ){
     path.y = height/2;
-  }
+  }*/
+  
+ /* if(path.y > 400 ){
+    path.y = width/2;
+  }*/
+  
+  /*if(path.x > 400 ){
+    path.x = width/2;
+  }*/
+  
+ /* if(path.x > 400 ){
+    path.x = width/2;
+  }*/
   
   drawSprites();
 }
